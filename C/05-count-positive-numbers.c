@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(void) {
-    int n;
+    int n,i;
     int count = 0;
 
     printf("How many integers will you enter? ");
@@ -11,18 +11,26 @@ int main(void) {
     }
 
     printf("Enter %d integers:\n", n);
+    
+    int value[50];
+    
     for (int i = 0; i < n; i++) {
-        int value;
-        if (scanf("%d", &value) != 1) {
-            printf("Invalid input.\n");
-            return 1;
+        
+        scanf("%d",&value[i]);
+        
+        if ( getchar =='\n'){
+         break;
         }
-
-        if (value > 0) {
+    }
+    
+    for( int y=0 ; y<n ; y++){
+        
+        if (value[y]>0){
             count++;
         }
     }
-
-    printf("Positive numbers: %d\n", count);
-    return 0;
+    
+     printf("%d",count);
+     
+     return 0;
 }
